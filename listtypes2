@@ -1,0 +1,2 @@
+FILE=~/Downloads/Work/leagueChamps.csv
+cat $FILE | cut -d "," -f3 | sort | uniq | grep -v Class
