@@ -3,7 +3,7 @@
 FILE=~/Downloads/Work/leagueChamps.csv
 
 usage() {
-	echo "$0 <command> [<args>]
+	echo "$@ <command> [<args>]"
 	echo "Commands: "
 	echo "list		list all types"
 	echo "num		list out all classes"
@@ -15,3 +15,4 @@ list() {
 	cat $FILE | cut -d "," -f3 | sort | uniq | grep -v Class
 }
 
+"$@"
