@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE=~/Downloads/Work/leagueChamps.csv
+FILE=~/Downloads/leagueapp/leagueChamps.csv
 
 usage() {
 	echo "$@ <command> [<args>]"
@@ -13,6 +13,10 @@ usage() {
 list() {
 	
 	cat $FILE | cut -d "," -f3 | sort | uniq | grep -v Class
+}
+
+class() {
+	cat $FILE | cut -d, -f3 | grep "$1" | sort | uniq -c
 }
 
 "$@"

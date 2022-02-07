@@ -1,1 +1,1 @@
-cat ~/Downloads/Work/leagueChamps.csv | cut -d "," -f3 | sort | uniq | grep -v Class
+cat ~/Downloads/leagueapp/leagueChamps.csv | cut -d "," -f3 | sort | uniq | grep -v Class
